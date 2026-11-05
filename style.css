@@ -1,0 +1,65 @@
+@font-face { font-family: "Fredoka"; src: url("fonts/Fredoka-SemiBold.ttf"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Fredoka"; src: url("fonts/Fredoka-Bold.ttf"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("fonts/DMSans-Regular.ttf"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("fonts/DMSans-SemiBold.ttf"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("fonts/DMSans-Bold.ttf"); font-weight: 700; font-display: swap; }
+
+/* Les couleurs de la DA de l'appli. */
+:root {
+  --paper: #FFF2F6;
+  --ink: #2A1A1F;
+  --mute: #8A7A80;
+  --pink: #FF4F8B;
+  --pink-dark: #D93A72;
+  --card: #FFFFFF;
+  --line: #F4E7EC;
+  --shadow: rgba(255, 79, 139, 0.10);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", -apple-system, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 64px; }
+
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+header img { width: 52px; height: 52px; border-radius: 12px; box-shadow: 0 6px 16px var(--shadow); }
+header a { color: inherit; text-decoration: none; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 28px; }
+
+h1 { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; margin: 0 0 14px; }
+h2 { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 25px; margin: 40px 0 10px; }
+h3 { font-weight: 700; font-size: 17px; margin: 0 0 4px; }
+
+.lead { font-size: 20px; color: var(--mute); margin: 0 0 32px; }
+.date { color: var(--mute); font-size: 15px; }
+
+.card { background: var(--card); border-radius: 24px; padding: 22px; margin: 12px 0; box-shadow: 0 6px 0 var(--shadow); }
+.card p { margin: 0; color: var(--mute); }
+.card p + p { margin-top: 8px; }
+
+.contact {
+  display: inline-block; background: var(--pink); color: #FFFFFF; border-radius: 999px;
+  padding: 14px 24px; font-weight: 700; text-decoration: none; margin: 4px 0 8px;
+  box-shadow: 0 4px 0 var(--pink-dark);
+}
+
+.phrase { color: var(--pink); font-weight: 700; }
+
+a { color: var(--pink-dark); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--mute); font-size: 15px; display: flex; gap: 18px; flex-wrap: wrap; }
+footer a { color: var(--mute); }
+
+@media (max-width: 480px) {
+  main { padding-top: 32px; }
+  h1 { font-size: 36px; }
+}
